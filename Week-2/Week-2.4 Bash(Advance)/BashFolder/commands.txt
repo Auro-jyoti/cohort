@@ -1,0 +1,17 @@
+pwd - print working directory / present working directory,
+cd - change directory,
+cd .. - move back in the working directory,
+cd/mnt/e - moves to the e drive,
+mkdir - makes a directory, to use a name with space put the name inside "",
+touch - lets you create empty files,
+cat - prints the contents of a file,
+vi - lets you edit files, also known as vim command,
+mv - move the files from one folder to another, (the first file one moves to the second one),
+cp - lets you copy files, (to copy folders use cp -r test newFolder),
+nvm - node version manger, install node from the command line using this command.
+
+/* Advance Bash */
+ls command comes with a lot of features such as details of a file or folder
+
+ls -l : tells about the owner, directory, last modified date and the file/folder name
+

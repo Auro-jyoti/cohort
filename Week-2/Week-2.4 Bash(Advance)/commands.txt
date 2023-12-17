@@ -1,0 +1,78 @@
+pwd - print working directory / present working directory,
+
+cd - change directory,
+
+cd .. - move back in the working directory,
+
+cd/mnt/e - moves to the e drive,
+
+mkdir - makes a directory, to use a name with space put the name inside "",
+
+touch - lets you create empty files,
+
+cat - prints the contents of a file,
+
+vi - lets you edit files, also known as vim command,
+
+mv - move the files from one folder to another, (the first file one moves to the second one),
+
+cp - lets you copy files, (to copy folders use cp -r test newFolder),
+
+nvm - node version manger, install node from the command line using this command.
+
+/* Advance Bash */
+
+ls command comes with a lot of features such as details of a file or folder
+
+ls -l : tells about the owner, directory, last modified date and the file/folder name
+
+ls -R directory_name : details about the sub directory,
+
+ls -la directory_name : even shows the hidden files and folders, "." ones represent the hidden ones.
+
+ls -lr directory_name : shows the modified directory in reverse order
+
+ls -s directory_name : lists directory by size
+
+ls *.json : get all the files with only .json extension
+
+cat > filename.txt : To edit the file in the bash itself, if you save it and edit again , it will override the existing one.
+
+cat >> filename.txt : To concatenate with already existing stuffs in the file.
+
+how can you use multiple commands together ? 
+
+makdir test && cd test
+
+mkdir -p frontend/scripts : To recursively create folders in one go.
+
+mv : used for both renameing as well as moving folders and files.
+
+cp : to copy files, folders from one place to another
+
+rm : remove files and folders
+
+rm-r : removes entire folder with sub folders
+
+-rwx : not a command but stands for read, write and execute
+
+chmod -R ugo -rwx: read write and execute, changing the permission of a file or folder, u for user, g for group and o for others
+
+chmod u+x filename.extension : Add permission
+
+chmod u-x filename.extension : remove permission
+
+echo "Hello World" : Prin something directly into the bash / terminal
+
+head filename.txt : gives the first ten lines of the file, 
+
+head -20 filename.txt : to get more than 10 lines use the -number option
+
+tail filename.txt : to get last ten lines of the file
+
+wc : word count
+
+grep : lets you find occurances of certain words/phrases or regular expression
+
+history : gives you all the commands that you have executed till date.
+

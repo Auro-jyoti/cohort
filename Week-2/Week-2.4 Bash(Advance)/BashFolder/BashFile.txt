@@ -1,0 +1,4 @@
+hthis file was created using the touch command,
+It had some inputs using cat > fileFromBash.txt, it was overridden when the same command was used again
+To concatenate in the same file , use cat >> fileFromBash.txt
+to exit use ctrl + d;
