@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function updateDomAccToState(state) {
+            const parent = document.getElementById("container");
+            parent.innerHTML = "";
+            for(let i=0; i<state.length;i++){
+                const child = createChild(state[i].title, state[i].description, state[i].id);
+                parent.appendChild(child);
+            }
+        }
+
+        window.setInterval(async function(){
+            const res = await fetch("https://sum-server.100xdevs.com/todos");
+            const json = await res.json();
+            updateDomAccToState(json);
+        })
+    </script>
+</body>
+</html> 
