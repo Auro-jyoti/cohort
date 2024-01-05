@@ -1,10 +1,12 @@
 const express = require('express');
 const { createTodo, updateTodo } = require('./types');
 const {todo} = require("./db");
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/todo",async function(req, res)  {
      const createPayload = req.body;
@@ -22,7 +24,6 @@ app.post("/todo",async function(req, res)  {
         title: createPayload.title,
         description: createPayload.description,
         completed: false,
-
      });
 
      res.json({
@@ -59,4 +60,7 @@ app.put("/completed", async function(req, res){
     res.json({
         msg: "Todo marked as completed"
     })
-})
+});
+
+
+app.listen(3000);

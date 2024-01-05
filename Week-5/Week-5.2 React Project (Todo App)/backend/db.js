@@ -3,9 +3,12 @@ mongoose.connect(
   "mongodb+srv://admin:testpwd@cluster0.mabqas5.mongodb.net/todos"
 );
 const todoSchema = mongoose.Schema({
-  title: string,
-  description: string,
-  completed: Boolean,
+  title: String,
+  description: String,
+  completed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 
