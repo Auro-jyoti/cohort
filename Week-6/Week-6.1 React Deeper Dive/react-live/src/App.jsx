@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import React from 'react';
 import './App.css'
+import Todo from './components/Todo';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -9,6 +10,27 @@ function App() {
   // function updateTitle() {
   //   setTitle("My name is "+ Math.random());
   // }
+  let counter = 2;
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "go to gym",
+      description: "bellly",
+    },
+    {
+      id: 2,
+      title: "go to class",
+      description: "test",
+    },
+  ]);
+
+  function addTodo() {
+    setTodos([...todos, {
+      id: counter++,
+      title: "test",
+      description: "no desc"
+    }])
+  }
 
   return (
     <>
@@ -17,6 +39,18 @@ function App() {
       <Header title="Aurojyoti"></Header>
       <Header title="Aurojyoti"></Header>
       <Header title="Aurojyoti"></Header>
+
+      <button onClick={addTodo}>Add a todo</button>
+
+      <div>
+        {todos.map((todo) => (
+          <Todo
+            key={todo.id}
+            title={todo.title}
+            description={todo.description}
+          />
+        ))}
+      </div>
     </>
   );
 }
