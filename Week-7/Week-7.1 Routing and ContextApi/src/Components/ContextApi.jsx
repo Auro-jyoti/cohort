@@ -9,12 +9,12 @@ const ParentComponent = () => {
     const [data, setData] = useState("Hello from the parent component");
 
     return (
-        <DataContext.provider value={{data, setData}}>
+        <DataContext.Provider value={{data, setData}}>
             <div>
                 <p>Parent Component</p>
                 <IntermediateComponent />
             </div>
-        </DataContext.provider>
+        </DataContext.Provider>
     )
 };
 
