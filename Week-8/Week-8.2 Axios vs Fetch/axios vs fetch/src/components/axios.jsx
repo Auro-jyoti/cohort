@@ -46,3 +46,18 @@ async function postCallWithBody() {
     const textualData = await response.text();
     console.log(textualData);
 }
+
+async function callAxiosWithBody() {
+    const response = await axios.post(
+        "https://www.example.com/todos", {
+            username: "harkirat",
+            password: "12345",
+        },
+        {
+            headers: {
+                Authorization: "Bear 123"
+            },
+        },
+    );
+    console.log(response.data);
+}
