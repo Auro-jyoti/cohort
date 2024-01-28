@@ -35,7 +35,7 @@ async function postCallWithBody() {
         {
             method: "POST",
             body: {
-                username: "harkirat",
+                username: "goldie",
                 password: "123223"
             },
             headers: {
@@ -61,3 +61,5 @@ async function callAxiosWithBody() {
     );
     console.log(response.data);
 }
+
+// in a get request u can not send body, in rest of the methods u can send body.
