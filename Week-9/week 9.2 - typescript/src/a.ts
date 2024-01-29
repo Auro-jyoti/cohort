@@ -77,3 +77,39 @@ class Employee implements Person {
 const e = new Employee("goldie", 22);
 
 console.log(e.name); 
+
+type UserType = {
+    firstName: string;
+    lastName: string;
+    age: number
+}
+
+// unions
+type stringOrNumber = string | number;
+
+function printId(id: stringOrNumber) {
+    console.log(`ID: ${id}`);
+}
+
+printId(10);
+printId("2");
+
+// intersections
+
+type EmployeeType = {
+    name: string;
+    startDate: Date;
+}
+
+type ManagerType = {
+    name: string;
+    department: string;
+}
+
+type TeamLead = EmployeeType & ManagerType;
+
+const teamLead: TeamLead = {
+    name: "Goldie",
+    startDate: new Date(),
+    department: "Software Developer"
+}
