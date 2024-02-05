@@ -7,5 +7,21 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://developeratbackend:************@ep-bold-meadow-90081743.us-east-2.aws.neon.tech/neondb?sslmode=require"
+  url      = "postgresql://developeratbackend:oKDZV0UvF5te@ep-bold-meadow-90081743.us-east-2.aws.neon.tech/neondb?sslmode=require"
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique
+  firstName String?
+  lastName String?
+  password String
+}
+
+model Todo {
+  id Int @id @default(autoincrement())
+  title String
+  done Boolean @default(false)
+  description String?
+  userId Int
 }
